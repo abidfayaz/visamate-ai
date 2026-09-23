@@ -1,0 +1,137 @@
+{
+  "_about": "Raw answers from the full 22-question re-run (Run 3) against the deployed app's /api/copilot endpoint on the current model (openai/gpt-oss-120b). One fresh single-turn conversation per question, each asked once. Scoring and caveats are in run3-full-rerun.md.",
+  "answers": {
+    "A1": {
+      "question": "How much does a UK Standard Visitor Visa cost?",
+      "verified": "The official UK Home Office fee for a Standard Visitor Visa is £135 per applicant, regardless of age, as listed on GOV.UK (checked 23 September 2026).",
+      "community": "Applicants often notice that the fee must be paid online at the time of application and is non‑refundable even if the visa is refused. Some also add the optional Priority service (£500) for faster processing if they need a quicker decision.",
+      "recommendation": "Pay the £135 application fee through the official visa portal when you submit your online application, and consider whether you need the extra £500 Priority service based on your travel timeline."
+    },
+    "A2": {
+      "question": "How much extra does priority processing cost?",
+      "verified": "The official GOV.UK fee for the Priority Visa Service is an additional £500 on top of the standard Standard Visitor Visa application fee of £135.",
+      "community": "Applicants often find the priority option useful when they need a decision within 5 working days, but they should still allow extra time for document preparation and courier delays.",
+      "recommendation": "If you need a faster decision, add the £500 priority service to your application and submit the combined fee of £635 when you book your appointment."
+    },
+    "A3": {
+      "question": "What's the fee for a 10-year long-term multi-entry visa?",
+      "verified": "According to the official GOV.UK fee table (checked 23 September 2026), the fee for a 10-year long-term multi-entry Standard Visitor Visa is £1,128. This amount is in addition to any optional priority service fees if you choose them.",
+      "community": "Applicants often opt for the 10-year visa when they travel frequently to the UK for business or family visits, finding it more cost‑effective than multiple short visas. However, they note that the longer visa still requires proof of genuine travel intent each time they enter the UK.",
+      "recommendation": "If you need a 10-year visa, prepare your supporting documents as for a standard visitor visa and include the £1,128 application fee in your payment. Consider whether you need the optional Priority or Super Priority service based on your travel timeline."
+    },
+    "A4": {
+      "question": "Is there a discount for children applying for a UK visitor visa?",
+      "verified": "Official GOV.UK guidance states that there is no reduced fee for children; children pay the same standard application fee of £135 as adults for a UK Standard Visitor Visa.",
+      "community": "Many families submit a joint application for all members to simplify the process, but each child still incurs the full adult fee. Some applicants note that providing clear supporting documents for children (e.g., school letters) can help avoid delays.",
+      "recommendation": "If you are applying for a child, submit a separate application and pay the full £135 fee, ensuring all required documents are included."
+    },
+    "B1": {
+      "question": "How long does a standard UK visitor visa take to process?",
+      "verified": "Official UK Home Office guidance states that the standard processing time for a UK Standard Visitor Visa is up to 15 working days (about 3 weeks) from the date the application is received, though it can vary depending on individual circumstances and peak periods.",
+      "community": "Applicants often report receiving decisions a few days earlier than the 15‑day target, especially when applying via the VFS Global centre and providing complete documentation. During high‑season travel periods (May‑August, December), processing can be slower, so many book appointments well in advance.",
+      "recommendation": "Submit your application as early as possible (at least 3 months before travel) and ensure all supporting documents are complete to avoid delays. Track your application through the VFS portal and be prepared for a possible extension during peak seasons."
+    },
+    "B2": {
+      "question": "How fast is priority processing?",
+      "verified": "The UK Home Office’s Priority Visa Service for Standard Visitor Visas aims to process applications within 5 working days from the date the application is received, provided all documents are in order. This is an official timeframe published on GOV.UK, but note that actual times can vary if additional checks are needed.",
+      "community": "Most Indian applicants report receiving a decision within 3–5 business days after submitting a complete priority application, especially when applying from major VFS Global centres in Delhi or Mumbai. Delays sometimes occur if the application is incomplete or if biometric appointments are back‑logged.",
+      "recommendation": "If you need your visa within a week, submit a Priority Visa Service application (£500 extra) and book your biometric appointment as soon as possible. Ensure all documents are complete to avoid any extensions beyond the 5‑day target."
+    },
+    "B3": {
+      "question": "Can I get a UK visa decision in 24 hours?",
+      "verified": "Official guidance states that the standard processing time for a UK Standard Visitor Visa is up to 15 working days, and there is no guarantee of a 24‑hour decision. The Super Priority Service, when available, aims to provide a decision by the end of the next working day, but this service costs an additional £1,000 and is subject to availability on the GOV.UK portal.",
+      "community": "Applicants who have used the Super Priority Service occasionally receive a decision within a few hours, but most report waiting until the next business day. The regular priority service (£500) typically takes around 5‑7 days, not 24 hours.",
+      "recommendation": "If you need a decision within 24 hours, check the current availability of the Super Priority Service on the official visa application website and book it immediately; otherwise, plan for the standard processing timeline."
+    },
+    "C1": {
+      "question": "How many months of bank statements do I need?",
+      "verified": "Official guidance on the UK Standard Visitor Visa states you should provide personal bank statements covering the most recent three months to demonstrate you have sufficient funds for your visit. The statements must be original or certified copies and show regular income and a clear balance. If you have irregular income, additional evidence may be required, but the baseline is three months of statements.",
+      "community": "Many Indian applicants choose to submit six months of bank statements to strengthen their financial evidence, especially if they have variable income or recent large deposits. Applicants also often include a letter from their employer confirming salary and leave dates, which helps the case officer assess financial stability.",
+      "recommendation": "Prepare at least six months of recent bank statements, along with a recent salary slip and an employer letter, to present a robust financial picture for your visa application."
+    },
+    "C2": {
+      "question": "Can I use fixed deposits as proof of funds?",
+      "verified": "GOV.UK states that you must show evidence you have enough money to cover the cost of your visit, such as bank statements, savings account statements, or fixed‑deposit (term‑deposit) certificates showing the balance and maturity date. The documents should be recent (usually within the last 6 months) and clearly show your name, account number and the amount available.",
+      "community": "Applicants often submit a fixed‑deposit certificate along with a recent bank statement that lists the deposit, because the visa officer can see both the total amount and that the funds are accessible. Make sure the fixed‑deposit is not locked beyond the planned travel dates, otherwise it may be questioned.",
+      "recommendation": "Include a certified copy of your fixed‑deposit certificate (showing the balance and maturity date) together with a recent bank statement covering the same account. Highlight the total amount and confirm it meets or exceeds the required funds for your trip before submitting your application."
+    },
+    "C3": {
+      "question": "Is there a minimum bank balance required by law for a UK visitor visa?",
+      "verified": "GOV.UK states there is no specific legally mandated minimum bank balance for a Standard Visitor Visa. Applicants must show they have enough funds to cover their travel, accommodation and living costs for the duration of their stay, and the Home Office may request evidence such as bank statements, payslips or sponsor letters. The guidance does not prescribe a fixed amount; the required evidence is assessed case‑by‑case based on the length of visit and planned activities.",
+      "community": "Most Indian applicants show bank statements covering the last six months with a balance of roughly £100‑£150 per day of the intended stay, or a lump‑sum that comfortably covers travel, hotel and daily expenses. Sponsors in the UK often add a sponsorship letter stating they will cover costs, which helps when personal savings appear low.",
+      "recommendation": "Prepare recent bank statements (last 6 months) showing a balance that clearly exceeds the total estimated cost of your trip (e.g., £150 × number of days). If you have a UK sponsor, include their invitation letter and proof of their ability to support you, and submit both with your visa application."
+    },
+    "C4": {
+      "question": "Can my parents sponsor my trip financially?",
+      "verified": "Official guidance from GOV.UK states that a Standard Visitor Visa applicant must show they have enough personal funds to support themselves for the duration of the visit. There is no specific requirement that the funds come from the applicant themselves; a sponsor such as a parent can provide a letter of support and evidence of their own finances, but the applicant must still submit proof (bank statements, payslips, etc.) that the sponsor’s money is available for their use.",
+      "community": "Many Indian applicants have successfully used parental sponsorship by submitting a sponsorship letter, the parents' bank statements, and proof of relationship (e.g., birth certificate). Consulates often look for clear evidence that the sponsor can cover travel, accommodation, and living costs, so a detailed financial breakdown helps.",
+      "recommendation": "Prepare a sponsorship letter from your parents stating the amount they will cover, attach their recent bank statements (last 6 months), and include your own identification documents. Submit these together with your visa application to demonstrate sufficient funds."
+    },
+    "D1": {
+      "question": "Do I need travel insurance for a UK visitor visa?",
+      "verified": "The official UK government guidance does not list travel insurance as a mandatory requirement for obtaining a Standard Visitor Visa. However, the Home Office advises that applicants should be able to demonstrate they have sufficient funds to cover their stay, which can include costs such as medical treatment or unexpected events, and travel insurance can help satisfy that expectation.",
+      "community": "Many Indian applicants choose to purchase travel insurance to strengthen their financial evidence and for peace of mind, especially if they have pre‑booked flights or medical conditions. Consular officers have noted that showing a policy can make the applicant’s financial documents look more robust, though it is not a formal requirement.",
+      "recommendation": "Include a copy of a comprehensive travel insurance policy (covering medical emergencies, repatriation, and trip cancellation) with your supporting documents to demonstrate financial preparedness, even though it is not strictly required."
+    },
+    "D2": {
+      "question": "Do I need to submit income tax returns?",
+      "verified": "Official guidance from GOV.UK states that applicants must show they can support themselves financially during their visit, typically via bank statements, savings, or sponsor letters; there is no explicit requirement to submit income tax returns unless specifically requested for proof of income.",
+      "community": "Many Indian applicants include recent Form 16 or IT return summaries as supporting evidence, especially if they are self‑employed, because it helps demonstrate stable income to the visa officer.",
+      "recommendation": "Include your latest income tax return (or Form 16) along with bank statements and a sponsor letter if you have one; it isn’t mandatory but strengthens your financial proof."
+    },
+    "D3": {
+      "question": "Is a cover letter / purpose of visit letter mandatory?",
+      "verified": "The official UK Home Office guidance does not list a cover letter or purpose of visit letter as a mandatory document for a Standard Visitor Visa application. It is optional but can be submitted to help clarify the applicant's travel intent, especially if the case is complex.",
+      "community": "Many Indian applicants include a concise cover letter explaining their itinerary, ties to India, and reasons for visiting, as it often strengthens the narrative for the visa officer. Consulates frequently note that a well‑structured letter can address gaps in documentation and reduce the chance of queries.",
+      "recommendation": "Prepare a brief, clear cover letter outlining your travel purpose, itinerary, accommodation, and ties to India; attach it to your application to support your case, even though it is not strictly required."
+    },
+    "D4": {
+      "question": "What documents does a self-employed applicant need instead of a salary slip?",
+      "verified": "Official guidance states that self‑employed applicants must provide evidence of their business activity instead of an employer‑issued salary slip. Acceptable documents include: a copy of the business registration (e.g., MSME registration or company incorporation certificate), recent Self‑Assessment tax returns (including the tax calculation and the SA302 form), audited or unaudited accounts for the last 12 months, and personal bank statements covering the same period that show income from the business. The Home Office also expects a detailed cover letter explaining the nature of the work and confirming that the applicant will return to their business after the visit.",
+      "community": "Applicants often supplement the official list with a letter from an accountant confirming the business’s financial health and a contract or invoices showing recent client work. Many find that providing both electronic and printed copies of bank statements (highlighting business transactions) speeds up the process, and it helps to translate any non‑English documents into English and notarise them.",
+      "recommendation": "Compile your business registration certificate, latest Self‑Assessment tax return (SA302), accounts for the past year, and 6 months of personal bank statements showing business income. Add an accountant’s letter and a brief cover letter outlining your visit purpose and intent to return, then upload these documents when you complete the online application."
+    },
+    "E1": {
+      "question": "I have no prior international travel. Can I still get a UK visa?",
+      "verified": "Official guidance from GOV.UK states that having no prior international travel does not disqualify you from applying for a UK Standard Visitor Visa. You must still meet all other eligibility requirements, such as proving sufficient funds, a clear purpose of visit, and strong ties to India (e.g., employment, family, property) to show you will return home after the visit.",
+      "community": "Many Indian applicants with no previous travel history have successfully obtained a Standard Visitor Visa by providing detailed documents like bank statements, employment letters, and property ownership proof. Consular officers often look for strong socioeconomic ties to the home country in such cases.",
+      "recommendation": "Prepare a robust document package that includes recent bank statements, a letter from your employer confirming leave, proof of any property or assets, and a detailed itinerary. Submit your application online, pay the £135 fee, and consider using the Priority service (£500 extra) if you need a faster decision."
+    },
+    "E2": {
+      "question": "Can I do tourism and visit family on the same visa?",
+      "verified": "Yes. The UK Standard Visitor Visa permits multiple activities such as tourism, visiting family or friends, and attending events, provided each activity is for a short stay (up to 6 months) and the purpose remains tourism/family visitation. Official guidance states the visa covers \"tourism, visiting family or friends, or business meetings\" as long as the visitor does not undertake work or study.",
+      "community": "Most Indian applicants combine tourism and family visits on a single Standard Visitor Visa without issues; they simply list both purposes on the application and provide invitation letters from relatives plus travel itinerary for sightseeing. It's helpful to show clear plans and accommodation bookings for both activities to avoid any confusion at the border.",
+      "recommendation": "Apply for a Standard Visitor Visa, indicate both tourism and family visitation as your purposes, and attach supporting documents (invitation letter, itinerary, hotel bookings). Ensure your total stay does not exceed 6 months and you have sufficient funds for the trip."
+    },
+    "E3": {
+      "question": "My employer letter is in Hindi - is that a problem?",
+      "verified": "Official guidance from GOV.UK states that supporting documents for a UK Standard Visitor Visa must be in English or accompanied by a certified translation. The translation must be signed by a qualified translator and include a statement that it is an accurate translation of the original Hindi document.",
+      "community": "Many Indian applicants submit Hindi letters with a notarised English translation and have not faced issues, provided the translation is clear and signed. Some consular staff may request a second translation if the first is informal, so using a professional translation service helps avoid delays.",
+      "recommendation": "Obtain a certified English translation of the Hindi employer letter, attach both the original Hindi and the translation to your application, and ensure the translator signs a statement confirming accuracy."
+    },
+    "E4": {
+      "question": "If my visa is rejected, can I reapply immediately?",
+      "verified": "Official guidance from GOV.UK states that a Standard Visitor Visa applicant whose previous application was refused may submit a new application at any time, but the new application must address the reasons for the original refusal and provide any additional supporting evidence. The Home Office expects the applicant to rectify any deficiencies noted in the refusal letter before reapplying. There is no mandatory waiting period imposed by the Home Office, but the decision must be final before a new application is lodged.",
+      "community": "In practice, many Indian applicants wait a short period (often 2‑4 weeks) to gather stronger documents and ensure the previous refusal reasons are fully addressed before reapplying. Some use the same online account to submit a fresh application, clearly referencing the prior refusal in the covering letter.",
+      "recommendation": "Review the refusal letter carefully, identify the specific reasons for denial, gather additional or corrected documentation, and submit a new application as soon as you have addressed those points. Consider using the Priority Visa Service (£500 extra) if you need a faster decision."
+    },
+    "E5": {
+      "question": "Can a self-employed person apply for a UK visitor visa?",
+      "verified": "Official guidance states that self‑employed individuals are eligible to apply for a UK Standard Visitor Visa. You must provide evidence of your self‑employment (e.g., business registration, tax returns, recent accounts) and show that you have sufficient funds to cover the trip and will return to your business after the visit. The standard application fee is £135 (as of 23 September 2026).",
+      "community": "Applicants who are self‑employed often submit documents such as their GST registration, recent audited accounts, and a letter from their own firm confirming leave and intent to return. Showing bank statements that reflect regular business income strengthens the case and reduces the chance of a refusal due to insufficient ties to India.",
+      "recommendation": "Collect your business registration, last 6‑month bank statements, tax filings, and a covering letter explaining the visit purpose and return plans, then submit the online application with the £135 fee and supporting documents."
+    },
+    "F1": {
+      "question": "What's the most common reason UK visitor visas get rejected?",
+      "verified": "GOV.UK lists several common reasons for Standard Visitor Visa refusals, including: insufficient evidence of financial means to support the stay, lack of clear ties to the home country (employment, family, property), incomplete or inaccurate documentation, and failure to demonstrate the purpose of the visit. The Home Office does not publish a single ranked \"most common\" reason, but these categories are repeatedly cited in official guidance.",
+      "community": "From applicants on forums and community groups, the top practical cause of refusals is not providing enough proof of strong ties to India—such as a stable job letter, property ownership, or family commitments—so the officer doubts the applicant will return. Another frequent issue is missing or vague travel itinerary and accommodation bookings, which make the purpose of the visit seem unclear.",
+      "recommendation": "Gather comprehensive evidence of your employment (letter of leave, salary slips), property or assets, and a detailed travel plan with confirmed bookings. Submit clear, complete documents to address the common refusal points and reduce the risk of rejection."
+    },
+    "F2": {
+      "question": "Does a lump-sum deposit right before applying hurt my chances?",
+      "verified": "Official guidance states that applicants must show genuine access to funds to cover their trip, typically through bank statements covering the last 28 days. There is no rule prohibiting a recent large deposit, but the Home Office may request evidence of the source of funds to ensure they are not borrowed solely for the visa application.",
+      "community": "Many Indian applicants have deposited savings shortly before applying and were asked to provide additional documents like salary slips, loan statements or tax returns to prove the money’s origin. Being prepared with clear source documents helps avoid delays or refusals.",
+      "recommendation": "If you make a lump‑sum deposit, include supporting evidence (e.g., salary slips, tax returns, or a letter from your bank) showing where the money came from, and be ready to submit these if requested."
+    }
+  }
+}

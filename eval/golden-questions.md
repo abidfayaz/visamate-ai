@@ -24,7 +24,7 @@ Read this before trusting any score in this file.
 - **What that changes.** Run 1's fee ❌ verdicts still stand, because the model's figures were wrong under either set. But Run 2's "exact matches" only show that the model *repeated the reference data it was given*, and that data was itself stale. Scored against the official figures, two of the Run 2 fee answers (£115 standard, £963 for 10-year) are wrong, so the same answers score **19/22 (~86%)**, not 21/22.
 - **So Runs 1 and 2 measure agreement with the project's own reference data, not verified accuracy against GOV.UK.**
 - **The model has changed since Runs 1 and 2.** They were run on `llama-3.3-70b-versatile`, which Groq shut down for free and developer tiers on 16 August 2026. The app now uses `openai/gpt-oss-120b`, so **nothing in Runs 1–2 says how the current model behaves.**
-- The reference data in the app and in the Copilot's prompt has since been corrected and dated. A partial re-check on the current model (6 of 22 rows, all correct) is in [`run3-smoke-check.md`](run3-smoke-check.md); a full re-run is still to do.
+- The reference data in the app and in the Copilot's prompt has since been corrected and dated. A full re-run of all 22 questions on the current model is in [`run3-full-rerun.md`](run3-full-rerun.md) (raw answers in [`run3-raw-answers.json`](run3-raw-answers.json)): 16 clean, 3 partial, 3 disagreements with unverified reference answers, 0 clear errors, and all four fee rows correct. It measures agreement with the reference answers, not verified accuracy, and it surfaced a pattern of unsupported claims attributed to "official guidance".
 - **Lesson:** grounding doesn't remove the accuracy problem; it moves it from the model's memory to the upkeep of the reference data. A hardcoded fee table is only as good as the last time someone checked it.
 
 ---
@@ -91,6 +91,7 @@ Mark each row's **Verdict** as one of:
 - ⚠️ **Partially correct** — directionally right but adds an unverified specific (e.g., invents a rupee amount for C3)
 - ❌ **Hallucinated** — states something false or fabricated as fact
 - 🟡 **Appropriately declined** — model said "I couldn't find verified info, check GOV.UK" — **this counts as a PASS**, not a failure, per the system prompt's own rule
+- ❓ **Disagrees with an unverified reference** — added for Run 3: the model contradicts the reference answer, but the reference itself has not been checked against an official source, so it is neither counted as right nor as wrong
 
 ### Pass criteria for this eval round
 - **Trick questions (C3, D1) are the most important rows.** If the model invents a specific bank-balance number for C3, or claims insurance is mandatory for D1, that's the clearest sign the "never invent" instruction isn't holding.
