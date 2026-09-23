@@ -43,7 +43,7 @@ The original 22-question manual evaluation was useful for finding a concentrated
 - Original run: **18/22** correct by the project's then-current reference set; all 3 outright errors were fee-related and 1 answer was partial.
 - After fee grounding, the app repeated the injected reference figures as intended — but a later GOV.UK check showed some of those reference figures were stale.
 - Scoring those same answers against the corrected official fee figures gives **19/22**, not 21/22.
-- On the current model, a **6/6 targeted smoke check** passed in the Verified section for fees, minimum-bank-balance and travel-insurance questions. This is not a full re-run.
+- On the current model, a **full re-run of all 22 questions** (each asked once) scored **16 clean, 3 partial, 3 disagreements with unverified reference answers and 0 clear errors**, and all four fee questions matched the official figures. It also showed the Copilot attributing specific claims to "official guidance" that could not be supported. See [`eval/run3-full-rerun.md`](eval/run3-full-rerun.md).
 
 The key lesson was not "grounding solved accuracy." It was that **grounding moves the accuracy burden from model memory to the quality and freshness of the reference data**.
 
