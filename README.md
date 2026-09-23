@@ -22,6 +22,31 @@ Its central idea is a **three-layer trust model**. Every piece of information is
 - On the static pages (Home, Visa Search, Community Insights) the labels are **written by hand into the data file**. Nothing checks them at runtime.
 - In the AI Copilot the model is **prompted** to return `verified` / `community` / `recommendation` sections, and the UI renders each with its badge. The label is the model's own self-classification. There is **no independent verification** that a "Verified" answer really comes from an official source, and answers do not cite specific pages.
 
+## My role
+
+I owned the **product problem, scope, trust model, requirements, evaluation design and iteration decisions**.
+
+AI coding tools were used to accelerate implementation. The important product choices here — separating evidence types, narrowing Phase 1 to one visa journey, grounding a failing factual category, keeping readiness scoring out of scope, and adding visible safety boundaries — were PM decisions that I defined and tested.
+
+## Key product decisions
+
+- **Trust model before feature breadth.** Verified facts, community-style context and AI interpretation are shown separately instead of blended into one authoritative-looking answer.
+- **UK-only for Phase 1.** The prototype stays narrow so the trust and knowledge-quality problem can be tested before adding countries.
+- **Diagnose failure before changing models.** Three outright errors in the original evaluation clustered in visa fees, so I grounded that category first rather than assuming a larger model was the fix.
+- **Source freshness is part of accuracy.** A later GOV.UK check showed the project's own fee reference data was stale. The fee data was corrected and dated, making the maintenance problem explicit.
+- **Readiness scoring remains unbuilt.** A percentage-like "chance of approval" or readiness score could create false confidence without stronger evidence and guardrails.
+
+## Validation
+
+The original 22-question manual evaluation was useful for finding a concentrated failure pattern, but its answer key was not fully authoritative.
+
+- Original run: **18/22** correct by the project's then-current reference set; all 3 outright errors were fee-related and 1 answer was partial.
+- After fee grounding, the app repeated the injected reference figures as intended — but a later GOV.UK check showed some of those reference figures were stale.
+- Scoring those same answers against the corrected official fee figures gives **19/22**, not 21/22.
+- On the current model, a **6/6 targeted smoke check** passed in the Verified section for fees, minimum-bank-balance and travel-insurance questions. This is not a full re-run.
+
+The key lesson was not "grounding solved accuracy." It was that **grounding moves the accuracy burden from model memory to the quality and freshness of the reference data**.
+
 ## What's live and what's demo
 
 | Area | Status |
