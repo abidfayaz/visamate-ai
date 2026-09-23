@@ -1,0 +1,23 @@
+{
+  "name": "visamate-ai",
+  "private": true,
+  "version": "1.0.0",
+  "description": "VisaMate AI — portfolio prototype: trust-labelled UK Standard Visitor Visa guidance for Indian passport holders. Not official visa advice.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "vite": "^8.1.3"
+  }
+}
