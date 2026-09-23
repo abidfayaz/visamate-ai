@@ -150,7 +150,7 @@ export const UK_VISA_DATA = {
     {
       flag: '🇬🇧', destination: 'UK', purpose: 'Tourism',
       source: 'Travel Blog (VisaJourney.in)', date: 'February 2026',
-      text: 'Priority processing (~5 working days) costs around £250 extra but is worth it for time-sensitive trips. Standard 3-week processing regularly extends to 5–6 weeks in peak summer season.',
+      text: 'Priority processing (~5 working days) is worth it for time-sensitive trips. Standard 3-week processing regularly extends to 5–6 weeks in peak summer season.',
     },
     {
       flag: '🇬🇧', destination: 'UK', purpose: 'Tourism',
@@ -191,8 +191,8 @@ export const UK_VISA_DATA = {
     },
     {
       type: 'verified', color: 'green',
-      text: 'Biometric data enrolled at VFS remains valid for 10 years — no re-enrollment needed for repeat applications.',
-      source: 'GOV.UK', date: '2023',
+      text: 'The Home Office fee table dated 8 October 2026 leaves visitor visa fees unchanged: £135 for a Standard Visitor Visa (up to 6 months).',
+      source: 'GOV.UK', date: '8 October 2026',
     },
   ],
 }
