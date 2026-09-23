@@ -4,7 +4,7 @@
 > It is for product/UX demonstration. Not all flows are connected to live visa systems. Always check requirements on [GOV.UK](https://www.gov.uk/standard-visitor-visa) and with VFS Global before applying.
 
 - **Source code:** https://github.com/abidfayaz/visamate-ai
-- **Live demo:** _added after deployment_
+- **Live demo:** https://visamate-ai.vercel.app
 
 ## What is VisaMate?
 
@@ -29,12 +29,14 @@ Its central idea is a **three-layer trust model**. Every piece of information is
 | Visa Search, Home, Community Insights | **Prototype data** — hardcoded in `src/data/visaData.js`, not connected to any live system |
 | Visit-visa **fee figures** | Checked against the GOV.UK Home Office fee tables on **23 September 2026** (a dated snapshot, not a live feed) |
 | Everything else in that data file (documents, processing times, validity, rejection reasons, community insights, updates) | **Not re-verified** — treat as illustrative |
-| AI Copilot | **Live** — calls Groq (`llama-3.3-70b-versatile`) through a small server-side function |
+| AI Copilot | **Live** — calls Groq (`openai/gpt-oss-120b`) through a small server-side function |
 | Readiness Check, Application Workspace | Not built — shown greyed out as "Coming Soon" |
 
 ## Tech stack
 
-React 19 · Vite · plain CSS · Groq API (`llama-3.3-70b-versatile`) · one serverless function (`api/copilot.js`, Vercel)
+React 19 · Vite · plain CSS · Groq API (`openai/gpt-oss-120b`) · one serverless function (`api/copilot.js`, Vercel)
+
+**A note on the model:** the prototype originally used `llama-3.3-70b-versatile`, which Groq shut down for free and developer tiers on 16 August 2026. It now uses `openai/gpt-oss-120b`, a reasoning model, run at low reasoning effort. Groq retires models regularly. If the Copilot starts showing "temporarily unavailable", check the Vercel function logs for Groq's error code and the [Groq deprecations page](https://console.groq.com/docs/deprecations), then change `GROQ_MODEL` in `api/copilot.js`. The evaluation results in `eval/` were measured on the old model (see the notes in that file).
 
 The browser never sees the Groq key. It calls this app's own `/api/copilot` endpoint, which holds the key, the model and the system prompt on the server, and limits input size.
 
@@ -77,7 +79,8 @@ Without a key the app still runs; asking the Copilot shows *"The AI service is t
 - **Community content and "Recent Updates" are static demo content**, not live feeds. "Most Helpful (demo order)" is a curated order, not real helpfulness data.
 - **Evaluation is small and manual.** See [`eval/golden-questions.md`](eval/golden-questions.md): 22 questions, one rater, mostly unverified reference answers, no automated regression suite. It is not a benchmark. Read the correction block at the top of that file — an earlier version of the fee reference answers was found to be out of date.
 - **Narrow scope.** UK Standard Visitor Visa, Indian passport holders only.
-- **Free-tier AI service.** Groq may be rate-limited or unavailable; the app then shows a generic "temporarily unavailable" message.
+- **Free-tier AI service.** Groq's free tier allows about 8,000 tokens per minute for this model, so a few quick questions in a row can be rate-limited; the app then shows a generic "temporarily unavailable" message. Groq can also retire models with little notice.
+- **Short chat memory.** Only the last 10 messages are sent to the model, to stay within that token budget.
 - **Light abuse protection only.** The endpoint caps message count and length, but there is no rate limiting.
 - **No accounts or persistence.** Chat history lives in the browser tab and is lost on refresh.
 

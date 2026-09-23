@@ -8,8 +8,9 @@ import {
 } from '../api/copilot.js'
 import { COPILOT_SUGGESTED_QUESTIONS } from '../data/visaData.js'
 
-// Matches the server-side cap in api/copilot.js.
-const MAX_HISTORY_MESSAGES = 20
+// Matches the server-side cap in api/copilot.js (keeps requests within the
+// free-tier token budget).
+const MAX_HISTORY_MESSAGES = 10
 
 function AIResponse({ message }) {
   if (message.error) {
@@ -70,6 +71,7 @@ export default function CopilotPage({
         .filter((m) => !m.error && m.content)
         .map(({ role, content }) => ({ role, content }))
         .slice(-MAX_HISTORY_MESSAGES)
+      while (history.length > 1 && history[0].role === 'assistant') history.shift()
       const raw = await askCopilot(history)
       const parsed = parseCopilotResponse(raw)
       setMessages([...nextMessages, { role: 'assistant', content: raw, parsed }])

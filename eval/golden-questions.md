@@ -23,7 +23,8 @@ Read this before trusting any score in this file.
 - **The fee figures used to score Runs 1 and 2 were out of date.** They were £115 / £432 / £771 / £963, taken from the project's requirements document. The official figures are **£135** (standard), **£506 / £903 / £1,128** (2 / 5 / 10-year) and **£500** (priority).
 - **What that changes.** Run 1's fee ❌ verdicts still stand, because the model's figures were wrong under either set. But Run 2's "exact matches" only show that the model *repeated the reference data it was given*, and that data was itself stale. Scored against the official figures, two of the Run 2 fee answers (£115 standard, £963 for 10-year) are wrong, so the same answers score **19/22 (~86%)**, not 21/22.
 - **So Runs 1 and 2 measure agreement with the project's own reference data, not verified accuracy against GOV.UK.**
-- The reference data in the app and in the Copilot's prompt has since been corrected and dated. Re-running the fee questions against the corrected figures (a "Run 3") is still to do.
+- **The model has changed since Runs 1 and 2.** They were run on `llama-3.3-70b-versatile`, which Groq shut down for free and developer tiers on 16 August 2026. The app now uses `openai/gpt-oss-120b`, so **nothing in Runs 1–2 says how the current model behaves.**
+- The reference data in the app and in the Copilot's prompt has since been corrected and dated. Re-running the questions on the current model against the corrected figures (a "Run 3") is still to do.
 - **Lesson:** grounding doesn't remove the accuracy problem; it moves it from the model's memory to the upkeep of the reference data. A hardcoded fee table is only as good as the last time someone checked it.
 
 ---

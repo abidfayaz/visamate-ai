@@ -9,11 +9,21 @@
 import { UK_VISA_DATA } from '../src/data/visaData.js'
 
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions'
-const GROQ_MODEL = 'llama-3.3-70b-versatile'
+// Groq retires models regularly (llama-3.3-70b-versatile was shut down for free
+// and developer tiers on 16 Aug 2026). If the Copilot starts failing with a
+// generic "unavailable" message, check the Vercel function logs for the Groq
+// error code, then https://console.groq.com/docs/deprecations.
+const GROQ_MODEL = 'openai/gpt-oss-120b'
 const UPSTREAM_TIMEOUT_MS = 25000
 
-// Input limits keep the endpoint from being used to run up token spend.
-const MAX_MESSAGES = 20
+// gpt-oss-120b is a reasoning model: reasoning tokens count against the output
+// budget, so keep effort low and leave headroom or the JSON reply can be cut off.
+const REASONING_EFFORT = 'low'
+const MAX_COMPLETION_TOKENS = 1536
+
+// Input limits keep the endpoint from being used to run up token spend, and keep
+// each request within Groq's free-tier limit of 8,000 tokens per minute.
+const MAX_MESSAGES = 10
 const MAX_USER_CHARS = 1000
 const MAX_ASSISTANT_CHARS = 6000
 
@@ -110,7 +120,8 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: GROQ_MODEL,
-        max_tokens: 1024,
+        max_completion_tokens: MAX_COMPLETION_TOKENS,
+        reasoning_effort: REASONING_EFFORT,
         response_format: { type: 'json_object' },
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
       }),
@@ -118,7 +129,11 @@ export default async function handler(req, res) {
     })
 
     if (!upstream.ok) {
-      console.error('Groq responded with HTTP', upstream.status)
+      // Server-side log only: HTTP status plus Groq's error code/type (e.g.
+      // "model_decommissioned"), never the message text, key or request body.
+      const detail = await upstream.json().catch(() => null)
+      const code = detail?.error?.code ?? detail?.error?.type ?? 'unknown'
+      console.error('Groq responded with HTTP', upstream.status, String(code).slice(0, 80))
       return res.status(upstream.status === 429 ? 429 : 502).json({ error: 'unavailable' })
     }
 
